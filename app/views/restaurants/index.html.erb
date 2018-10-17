@@ -1,0 +1,17 @@
+<!-- app/views/admin/restaurants/index.html.erb -->
+<div class="container">
+  <div class="wrapper">
+    <div class= restaurant-list>
+      <h1>My list of restaurants</h1>
+      <% @restaurants.each do |restaurant| %>
+        <p>Etablissement</p><%= link_to(restaurant.name, restaurant_path(restaurant)) %> -
+        <%= link_to 'Edit', edit_restaurant_path(restaurant) %> -
+        <%= link_to 'X', restaurant_path(restaurant), method: :delete, data: {confirm: "Are you sure?"} %>
+        <p><%= restaurant.address %></p>
+        <p><%= restaurant.category %></p>
+      <% end %>
+    </div>
+  <%= link_to 'Add a restaurant', new_restaurant_path, class: "bouton" %>
+  </div>
+
+</div>

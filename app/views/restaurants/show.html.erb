@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="wrapper">
+    <div class="show-restaurant">
+      <h1><%= @restaurant.name %></h1>
+      <ul>
+        <li>Phone: <%= @restaurant.phone_number %></li>
+      </ul>
+    </div>
+
+    <div class="show-restaurant-button">
+      <%= link_to 'Retour à la liste des restaurants', root_path,  class: "bouton" %>
+    </div>
+
+    <div class="show-review">
+      <h1>ADD A REVIEW</h1>
+
+      <ul>
+        <% @restaurant.reviews.each do |review| %>
+          <li>Rating: <%= review.rating %> </li>
+          <li>Content: <%= review.content %> </li>
+        <% end %>
+      </ul>
+    </div>
+
+    <div class="show-review-button">
+      <%= link_to 'add a review', new_restaurant_review_path(@restaurant), class: "bouton" %>
+    </div>
+  </div>
+</div>

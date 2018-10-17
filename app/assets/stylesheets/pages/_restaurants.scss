@@ -1,0 +1,49 @@
+h1 {
+  margin-bottom: 30px;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 750px;
+  text-align: center;
+  // border: 2px solid red;
+}
+
+// .wrapper {
+//   text-align: center;
+//   border: 2px solid black;
+// }
+
+.bouton {
+  color: white;
+  border: 1px solid $blue;
+  background-color: $blue;
+  padding: 15px 20px;
+  border-radius: 20px;
+}
+
+.restaurant-list {
+  margin-bottom: 50px;
+}
+
+.show-restaurant {
+  margin-bottom: 50px;
+}
+
+.show-review {
+  margin-bottom: 50px;
+}
+
+.show-restaurant-button {
+  margin-bottom: 50px;
+}
+
+form input {
+  border-radius: 5px;
+}
